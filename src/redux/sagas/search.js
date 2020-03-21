@@ -9,15 +9,21 @@ import {
     SEARCH_MOVIE_COMPLETE
 } from '../../consts/actionTypes'
 
-export function* searchMovie({payload}){
-try{
+import {
+    apiCall
+} from '../api/index'
 
-} 
-catch(err){
+export function* searchMovie({
+    payload
+}) {
+    try {
+        console.log("BIBIJBIBIBIBIBIB")
+    } catch (error) {
 
+
+    }
 }
-}
 
-export default function* search(){
+export default function* search() {
     yield takeLatest(SEARCH_MOVIE_START, searchMovie)
 }

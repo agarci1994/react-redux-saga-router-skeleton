@@ -16,10 +16,12 @@ export default function (state = initialState, action) {
                 ...state
             }
         case SEARCH_MOVIE_ERROR:
+                console.log(action)
             return {
                 ...state
             }
         case SEARCH_MOVIE_COMPLETE:
+            console.log(action)
             return {
                 ...state
             }
