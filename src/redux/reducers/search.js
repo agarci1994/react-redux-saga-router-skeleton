@@ -13,18 +13,26 @@ export default function (state = initialState, action) {
     switch (action.type) {
         case SEARCH_MOVIE_START:
             return {
-                ...state
-            }
-        case SEARCH_MOVIE_ERROR:
-                console.log(action)
-            return {
-                ...state
-            }
+                ...state,
+                isLoading: true,
+                movies: null
+            };
+        break;
         case SEARCH_MOVIE_COMPLETE:
             console.log(action)
             return {
-                ...state
-            }
+                ...state,
+                isLoading: false,
+                movieResults: get(action, 'results.data')
+            };
+        break;
+        case SEARCH_MOVIE_ERROR:
+            return {
+                ...state,
+                isLoading: false,
+                movies: null
+            };
+        break;
         default: 
             return {
             ...state
