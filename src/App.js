@@ -5,14 +5,16 @@ import PropTypes from 'prop-types';
 import Result from './pages/Results/index'
 
 import Home from './pages/Home';
+import MovieDetail from './pages/movieDetails'
 
 const App = ({ store }) => (
 	<Provider store={store}>
 		<Router>
 			<div>
-				<Route exact path="/" component={Home} />
-				<Route exact path="/results" component={Result} />
 
+				<Route exact path="/" component={Home} />
+				<Route path="/results" component={Result} />
+         <Route path="/movie/:id" component={MovieDetail} />
 			</div>
 		</Router>
 	</Provider>
