@@ -1,7 +1,9 @@
 import React from 'react'
 import {Card, Grid, Typography, Button} from '@material-ui/core'
 import {withRouter} from 'react-router-dom'
+
 import style from './style'
+
 const MovieResult = ({Title, Year, Type, imdbID, Poster, history}) =>  {
     const classes = style()
 

@@ -23,7 +23,7 @@ const renderMovies = () => {
 if (movies){
     return movies.map((value, idx) => <MovieResults key={idx} {...value} />) 
 } else if (isLoading){
-    return <CircularProgress size={100} color="primary"/>
+    return <CircularProgress size={100} color="primary" />
 }
 }
 
